@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Home</h1>
+  
+<ul>
+  {% for x in myimages %}
+    <li>{{ x.image }}</li>
+  {% endfor %}
+</ul>
+
+<button><a href="{% url 'image-upload' %}">Upload Image</a></button>
+
+</body>
+</html>
