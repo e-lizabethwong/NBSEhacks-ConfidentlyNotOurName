@@ -18,21 +18,21 @@ def personal(request):
 def map(request):
     return render(request, 'map.html')
 
-def chatbot(request, mentor_name):  # Add mentor_name here
+def chatbot(request, mentor_name, work_field):  # Add mentor_name here
     if 'chat_history' not in request.session:
         request.session['chat_history'] = []
 
     if request.method == "POST":
         user_message = request.POST.get('user_message', '')
         bot_response = f"Echo: {user_message}"
-        request.session['chat_history'].append(('User', user_message))
+        request.session['chat_history'].append(('User', 'me', user_message))
         # Use my_string instead of 'Bot'
-        request.session['chat_history'].append((mentor_name, bot_response))
+        request.session['chat_history'].append((mentor_name, work_field, bot_response))
         request.session.modified = True
-        return redirect('chatbot', mentor_name=mentor_name)  # Pass my_string back to maintain it across requests
+        return redirect('chatbot', mentor_name=mentor_name, work_field='health')  # Pass my_string back to maintain it across requests
 
     chat_history = request.session['chat_history']
-    return render(request, 'chatbot.html', {'chat_history': chat_history, 'mentor_name': mentor_name})
+    return render(request, 'chatbot.html', {'chat_history': chat_history, 'mentor_name': mentor_name, 'work_field': 'health'})
 
 def end_chat_session(request):
     # Clear chat history from the session
