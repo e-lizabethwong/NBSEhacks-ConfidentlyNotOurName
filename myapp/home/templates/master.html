@@ -34,6 +34,8 @@
   <a href="/personal/">
     {% if request.path == "/personal/" %}
         <img src="{% static 'navbar/user-active.png' %}" alt="User"/>
+    {% elif request.path == "/chatbot/" %}
+      <img src="{% static 'navbar/user-active.png' %}" alt="User"/>
     {% else %}
         <img src="{% static 'navbar/user-inactive.png' %}" alt="User"/>
     {% endif %}
@@ -61,5 +63,8 @@
   </a>
 </nav>
 </div>
+
+{% block js %}
+{% endblock %}
 </body>
 </html>
