@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b825ed1-2dd7-457c-88f9-1b07d6541029" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/NSBEhacksWWW.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/cohereChat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/myapp/cohereCustomClassify.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/readReceipt.py" afterDir="false" />
+    <list default="true" id="1b825ed1-2dd7-457c-88f9-1b07d6541029" name="Changes" comment="image input backend as well as question bot backend">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/cohereChat.py" beforeDir="false" afterPath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/cohereChat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/myapp/cohereCustomClassify.py" beforeDir="false" afterPath="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/myapp/cohereCustomClassify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +22,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -44,6 +44,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.cohereChat.executor": "Run",
+    "Python.cohereCustomClassify.executor": "Run",
     "Python.manage.executor": "Run",
     "Python.readReceipt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -66,6 +68,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/cohereChat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cohereCustomClassify" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="NSBEhacksWWW" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/myapp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NBSEhacks-ConfidentlyNotOurName/myapp/cohereCustomClassify.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,6 +167,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.cohereChat" />
+        <item itemvalue="Python.cohereCustomClassify" />
         <item itemvalue="Python.readReceipt" />
         <item itemvalue="Python.manage" />
       </list>
@@ -164,6 +189,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708818227797</updated>
     </task>
+    <task id="LOCAL-00001" summary="image input backend as well as question bot backend">
+      <option name="closed" value="true" />
+      <created>1708845610381</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708845610381</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="image input backend as well as question bot backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="image input backend as well as question bot backend" />
   </component>
 </project>
