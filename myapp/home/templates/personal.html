@@ -1,0 +1,16 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/personal.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Explore mentors</h1>
+<h2 class="sub-heading">It’s that easy with WealthSimple!</h2>
+<div class="searchbar-container">
+    <input type="text" placeholder="Search anything...">
+    <text>filter</text>
+</div>
+<h2 class="meeting">Upcoming meetings</h2>
+{% endblock content %}

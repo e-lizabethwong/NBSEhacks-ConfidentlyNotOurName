@@ -10,17 +10,54 @@
 </head>
 <body>
 <div>
-<nav>
-  <a href="">Home</a>
-  <a href="nav/">Nav</a>
-  <a href="personal/">Personal</a>
-  <a href="health/">Health</a>
-  <a href="asset/">Asset</a>
-  <a href="education/">Education</a>
-</nav>
 
 {% block content %}
 {% endblock %}
+
+<nav>
+  <a href="/">
+    {% if request.path == "/" %}
+        <img src="{% static 'navbar/home-active.png' %}" alt="Home"/>
+    {% else %}
+        <img src="{% static 'navbar/home-inactive.png' %}" alt="Home"/>
+    {% endif %}
+  </a>
+  <a href="/nav/">
+    {% if request.path == "/nav/" %}
+        <img src="{% static 'navbar/discovery-active.png' %}" alt="Discovery"/>
+    {% else %}
+        <img src="{% static 'navbar/discovery-inactive.png' %}" alt="Discovery"/>
+    {% endif %}
+  </a>
+  <a href="/personal/">
+    {% if request.path == "/personal/" %}
+        <img src="{% static 'navbar/user-active.png' %}" alt="User"/>
+    {% else %}
+        <img src="{% static 'navbar/user-inactive.png' %}" alt="User"/>
+    {% endif %}
+  </a>
+  <a href="/health/">
+    {% if request.path == "/health/" %}
+        <img src="{% static 'navbar/cardiogram-active.png' %}" alt="Cardiogram"/>
+    {% else %}
+        <img src="{% static 'navbar/cardiogram-inactive.png' %}" alt="Cardiogram"/>
+    {% endif %}
+  </a>
+  <a href="/asset/">
+    {% if request.path == "/asset/" %}
+        <img src="{% static 'navbar/dollar-active.png' %}" alt="Dollar"/>
+    {% else %}
+        <img src="{% static 'navbar/dollar-inactive.png' %}" alt="Dollar"/>
+    {% endif %}
+  </a>
+  <a href="/education/">
+    {% if request.path == "/education/" %}
+        <img src="{% static 'navbar/graduation-cap-active.png' %}" alt="Graduation-cap"/>
+    {% else %}
+        <img src="{% static 'navbar/graduation-cap-inactive.png' %}" alt="Graduation-cap"/>
+    {% endif %}
+  </a>
+</nav>
 </div>
 </body>
 </html>
