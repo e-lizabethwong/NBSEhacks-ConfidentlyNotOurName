@@ -3,27 +3,25 @@ import base64
 from openai import OpenAI
 
 
-oa_api_key = "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"
-ch_api_key = "fVHw36A8DdVfH3ubOgu6bjQotk37QinmZLz4X0sq"
+oa_api_key = "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"
+ch_api_key = "qvsnPF32GyJsIFjGQXzzY8MCEUlNabK4TiVZ6sgX"
 
-vision = OpenAI(api_key=oa_api_key)
 
 # Function to encode the image
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-    # Path to your image
-# cant open the sql :(((
 
-image_path = "myapp/media/images/walmartReceipt.jpg"
+# sql path here
+image_path = "media/images/walmartReceipt.jpg"
 
 # Getting the base64 string
 base64_image = encode_image(image_path)
 
 
-client = OpenAI(api_key=oa_api_key)
-response = client.chat.completions.create(
+vision = OpenAI(api_key=oa_api_key)
+response = vision.chat.completions.create(
     model="gpt-4-vision-preview",
     messages=[
         {
@@ -49,13 +47,13 @@ response = client.chat.completions.create(
 imageDescription = response.choices[0].message.content
 
 co = cohere.Client(ch_api_key)
-# get the custom model object
-ft = co.get_custom_model_by_name('fVHw36A8DdVfH3ubOgu6bjQotk37QinmZLz4X0sq')
+# implement custom model
+ft = co.get_custom_model_by_name('purchasesort')
 
 classifiedPurchase = co.classify(
-    inputs=["classify this!"],
+    inputs=[imageDescription],
     model=ft.model_id,
 )
 
-# Printing the model's response.
-print(classifiedPurchase)
+# getting the final answer from the model
+classification = classifiedPurchase.classifications[0].predictions[0]
