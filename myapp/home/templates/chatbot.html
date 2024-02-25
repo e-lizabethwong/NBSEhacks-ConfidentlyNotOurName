@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block content %}
-<h2>Chat with our bot</h2>
+<h2>Chat with {{ mentor_name }}</h2>
 
-<div id="chat-container" style="border:1px solid #ccc; height:300px; overflow:auto; padding:10px; margin-bottom:20px;">
+<div class="chat-container">
     {% for role, field, message in chat_history %}
         {% if role == 'User' %}
         <div><strong>{{ role }}:</strong> {{ message }}</div>
@@ -18,12 +18,12 @@
     {% endfor %}
 </div>
 
-<form method="POST" action="{% url 'chatbot' mentor_name=mentor_name work_field=work_field %}">
+<form class="send-btn" method="POST" action="{% url 'chatbot' mentor_name=mentor_name work_field=work_field %}">
     {% csrf_token %}
     <input type="text" name="user_message" placeholder="Type your message here..." autofocus>
     <button type="submit">Send</button>
 </form>
-<form action="{% url 'end_chat_session' %}" method="post">
+<form class="chatend-btn" action="{% url 'end_chat_session' %}" method="post">
     {% csrf_token %}
     <button type="submit">End Chat Session</button>
 </form>
