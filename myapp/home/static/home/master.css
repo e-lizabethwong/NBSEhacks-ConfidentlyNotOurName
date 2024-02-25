@@ -1,13 +1,11 @@
 @font-face {
     font-family: 'roboto';
     src: local('Roboto'),
-        url('../static/fonts/Roboto-regular.ttf') format("truetype");
+        url('../fonts/Roboto-regular.ttf') format("truetype");
 }
 
 html {
-    font-family: roboto;
     background-color: gray;
-
 }
 
 .container {
