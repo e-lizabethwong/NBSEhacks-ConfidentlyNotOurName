@@ -3,6 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from image_upload.models import ImageUpload
 from django.conf import settings
+from cohereChat import cohereChat
 
 def home(request):
     myimages = ImageUpload.objects.all().values()
@@ -24,15 +25,15 @@ def chatbot(request, mentor_name, work_field):  # Add mentor_name here
 
     if request.method == "POST":
         user_message = request.POST.get('user_message', '')
-        bot_response = f"Echo: {user_message}"
+        bot_response = cohereChat(user_message, work_field)
         request.session['chat_history'].append(('User', 'me', user_message))
         # Use my_string instead of 'Bot'
         request.session['chat_history'].append((mentor_name, work_field, bot_response))
         request.session.modified = True
-        return redirect('chatbot', mentor_name=mentor_name, work_field='health')  # Pass my_string back to maintain it across requests
+        return redirect('chatbot', mentor_name=mentor_name, work_field=work_field)  # Pass my_string back to maintain it across requests
 
     chat_history = request.session['chat_history']
-    return render(request, 'chatbot.html', {'chat_history': chat_history, 'mentor_name': mentor_name, 'work_field': 'health'})
+    return render(request, 'chatbot.html', {'chat_history': chat_history, 'mentor_name': mentor_name, 'work_field': work_field})
 
 def end_chat_session(request):
     # Clear chat history from the session
