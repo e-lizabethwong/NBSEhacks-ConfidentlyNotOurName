@@ -1,12 +1,13 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'image_upload/style.css' %}">
 <!DOCTYPE html>
 <html>
 <head>
     <title>Upload Image</title>
+    <link rel="stylesheet" href="{% static 'image_upload/style.css' %}">
 </head>
 <body>
+<div>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
@@ -14,5 +15,6 @@
     </form>
 
     <button><a href="{% url 'home' %}">Go Home</a></button>
+</div>
 </body>
 </html>

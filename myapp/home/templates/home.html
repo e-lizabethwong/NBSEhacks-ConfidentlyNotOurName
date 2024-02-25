@@ -1,11 +1,15 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'home/style.css' %}">
 
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Money</title>
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+</head>
 <body>
-
+<div>
 <h1>Home</h1>
   
 <ul>
@@ -15,6 +19,6 @@
 </ul>
 
 <button><a href="{% url 'image-upload' %}">Upload Image</a></button>
-
+</div>
 </body>
 </html>

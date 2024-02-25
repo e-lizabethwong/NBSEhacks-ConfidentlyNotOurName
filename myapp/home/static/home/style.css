@@ -1,3 +1,10 @@
+div {
+    width: 270px;
+    height: 600px;
+    background-color: aqua;
+    margin: auto;
+    overflow: auto;
+}
 a:link, a:visited {
     color: gray;
     text-align: center;
