@@ -34,7 +34,7 @@
   <a href="/personal/">
     {% if request.path == "/personal/" %}
         <img src="{% static 'navbar/user-active.png' %}" alt="User"/>
-    {% elif request.path == "/chatbot/" %}
+    {% elif mentor_name %}
       <img src="{% static 'navbar/user-active.png' %}" alt="User"/>
     {% else %}
         <img src="{% static 'navbar/user-inactive.png' %}" alt="User"/>
