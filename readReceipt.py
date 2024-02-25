@@ -1,0 +1,47 @@
+import base64
+from openai import OpenAI
+
+# PRETTY SURE THIS IS DEADGE BC I MOVED IMOPRTANT SHT TO COHERECUSTOM CLASSIFY
+
+api_key = "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"
+
+
+# Function to encode the image
+def encode_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
+
+    # Path to your image
+# cant open the sql :(((
+
+image_path = "myapp/media/images/walmartReceipt.jpg"
+
+# Getting the base64 string
+base64_image = encode_image(image_path)
+
+
+client = OpenAI(api_key="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")
+response = client.chat.completions.create(
+    model="gpt-4-vision-preview",
+    messages=[
+        {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": "What was purchased in this receipt? How much was it?",
+                },
+                {
+                    "type": "image_url",
+                    "image_url": {
+                        # replace with front end input
+                        "url": f"data:image/jpeg;base64,{base64_image}",
+                    },
+                },
+            ],
+        }
+    ],
+    max_tokens=300,
+)
+
+print(response.choices[0].message.content)
