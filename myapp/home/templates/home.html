@@ -10,7 +10,7 @@
   
 <ul>
   {% for x in myimages %}
-    <li>{{ x.image }}</li>
+    <li><a href="/media/{{ x.image }}">{{ x.image }}</a></li>
   {% endfor %}
 </ul>
 
