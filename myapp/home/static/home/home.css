@@ -1,8 +1,4 @@
-button {
-    color: gray;
-}
-
-a:link, a:visited {
+.img-button {
     color: gray;
     text-align: center;
     text-decoration: none;

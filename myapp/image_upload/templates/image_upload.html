@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Image</title>
-</head>
-<body>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
+{% extends 'master.html' %}
+{% load static %}
 
-    <button><a href="{% url 'home' %}">Go Home</a></button>
-</body>
-</html>
+{% block css %}
+<link rel="stylesheet" href="{% static 'image_upload/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+
+<button><a href="{% url 'home' %}">Go Home</a></button>
+{% endblock content %}

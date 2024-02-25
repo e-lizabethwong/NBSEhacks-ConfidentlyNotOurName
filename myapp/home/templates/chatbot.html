@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/chatbot.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Chat with our bot</h2>
+
+<div id="chat-container" style="border:1px solid #ccc; height:300px; overflow:auto; padding:10px; margin-bottom:20px;">
+    {% for role, field, message in chat_history %}
+    <div><strong>{{ role }} ({{ field }}):</strong> {{ message }}</div>
+    {% endfor %}
+</div>
+
+<form method="POST" action="{% url 'chatbot' mentor_name=mentor_name work_field='health' %}">
+    {% csrf_token %}
+    <input type="text" name="user_message" placeholder="Type your message here..." autofocus>
+    <button type="submit">Send</button>
+</form>
+<form action="{% url 'end_chat_session' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">End Chat Session</button>
+</form>
+{% endblock %}

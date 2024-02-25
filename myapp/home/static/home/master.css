@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'roboto';
+    src: local('Roboto'),
+        url('../static/fonts/Roboto-regular.ttf') format("truetype");
+}
+
+html {
+    font-family: roboto;
+    background-color: gray;
+
+}
+
+.container {
+    width: 400px;
+    height: 800px;
+    background-color: #EEEEEE;
+    margin: auto;
+    position: relative;
+}
+
+.content {
+    padding-top: 10px;
+    margin-left: 25px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 80px;
+    background-color: white;
+    position: absolute;
+    /* Position nav absolutely within the div */
+    bottom: 0;
+    /* Anchor nav to the bottom */
+    left: 0;
+    /* Align nav to the left edge */
+    right: 0;
+    /* Align nav to the right edge */
+}

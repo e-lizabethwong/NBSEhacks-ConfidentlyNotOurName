@@ -1,0 +1,140 @@
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.sub-heading {
+    color: gray;
+}
+
+.searchbar-container {
+    display: flex; /* Enables Flexbox layout for children of this div */
+    flex-direction: row;
+    align-items: center; /* Centers children horizontally */
+    height: 43px;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Corrected selectors for input and img */
+.searchbar-container input {
+    height: 40px;
+    width: 293px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 12px;
+}
+
+.searchbar-container img {
+    height: 40px;
+    width: 38.65px;
+}
+
+.meeting-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust the gap size as needed */
+}
+
+.meeting-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center; /* Centers children horizontally */
+    height: 85px;
+    width: 355px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.person-img {
+    width: 48px;
+    height: 46px;
+    margin-left: 10px;
+}
+
+.text-container {
+    height: 60px;
+    background-color: white;
+}
+.text-container p {
+    height: 1rem;
+    margin: 10px;
+}
+
+.description {
+    font-size: 16px;
+}
+.date {
+    color: gray;
+    font-size: 14px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
+    height: 26px;
+    width: 26px;
+}
+
+.recommended-list {
+    display: flex;
+    overflow: hidden;
+    gap: 20px; /* Adjust the gap size as needed */
+}
+
+.recommended-wrapper {
+    flex: 0 0 auto; /* Flex items don't grow or shrink but are based on their width */
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 230px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.recommended-container {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.recommended-img {
+    width: 48px;
+    height: 46px;
+    margin-bottom: 10px;
+}
+
+.recommended-name {
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+
+.recommended-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers children horizontally */
+    margin-top: 0;
+    position: relative;
+}
+
+.category {
+    font-size: 14px;
+    color: gray;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centers children horizontally */
+    position: absolute;
+    right: 25px;
+}
+
+.star-img {
+    width: 14.5px;
+    height: 14.25px;
+}
