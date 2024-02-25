@@ -19,7 +19,7 @@ image_path = "media/images/walmartReceipt.jpg"
 # Getting the base64 string
 base64_image = encode_image(image_path)
 
-
+# machine vision implementation via API
 vision = OpenAI(api_key=oa_api_key)
 response = vision.chat.completions.create(
     model="gpt-4-vision-preview",
@@ -41,11 +41,12 @@ response = vision.chat.completions.create(
             ],
         }
     ],
-    max_tokens=300,
 )
 
+# get image description in String format
 imageDescription = response.choices[0].message.content
 
+# COHERE classify implementation
 co = cohere.Client(ch_api_key)
 # implement custom model
 ft = co.get_custom_model_by_name('purchasesort')
