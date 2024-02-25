@@ -11,9 +11,9 @@
 <div class="chat-container">
     {% for role, field, message in chat_history %}
         {% if role == 'User' %}
-        <div><strong>{{ role }}:</strong> {{ message }}</div>
+        <div><strong>{{ role }}:</strong> {{ message|linebreaksbr }}</div>
         {% else %}
-        <div><strong>{{ role }} ({{ field }}):</strong> {{ message }}</div>
+        <div><strong>{{ role }} ({{ field }}):</strong> {{ message|linebreaksbr }}</div>
         {% endif %}
     {% endfor %}
 </div>
