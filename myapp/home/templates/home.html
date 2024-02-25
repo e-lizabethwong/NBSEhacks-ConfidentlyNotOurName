@@ -1,15 +1,11 @@
+{% extends 'master.html' %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
+{% endblock %}
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Money</title>
-  <link rel="stylesheet" href="{% static 'home/style.css' %}">
-</head>
-<body>
-<div>
+{% block content %}
 <h1>Home</h1>
   
 <ul>
@@ -19,6 +15,4 @@
 </ul>
 
 <button><a href="{% url 'image-upload' %}">Upload Image</a></button>
-</div>
-</body>
-</html>
+{% endblock content %}

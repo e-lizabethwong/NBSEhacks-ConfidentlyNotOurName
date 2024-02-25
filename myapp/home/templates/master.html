@@ -1,12 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{% block title %}{% endblock %}</title>
+  <title>Money</title>
+  <link rel="stylesheet" href="{% static 'home/master.css' %}">
+  {% block css %}
+  {% endblock %}
 </head>
 <body>
+<div>
+<nav>
+  <a href="">Home</a>
+  <a href="nav/">Nav</a>
+  <a href="personal/">Personal</a>
+  <a href="health/">Health</a>
+  <a href="asset/">Asset</a>
+  <a href="education/">Education</a>
+</nav>
 
 {% block content %}
 {% endblock %}
-
+</div>
 </body>
 </html>
