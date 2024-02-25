@@ -3,6 +3,21 @@
     src: url('../fonts/Roboto-regular.ttf') format("truetype");
 }
 
+@font-face {
+    font-family: 'PTSans';
+    src: url('../fonts/PTSans-regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c';
+    src: url('../fonts/MPLUSRounded1c-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'MPLUSRounded1c-ExtraBold';
+    src: url('../fonts/MPLUSRounded1c-ExtraBold.ttf') format("truetype");
+}
+
 html {
     font-family: 'roboto', sans-serif;
     background-color: gray;

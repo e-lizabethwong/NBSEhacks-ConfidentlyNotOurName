@@ -1,0 +1,78 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/map_search.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="topbar-component">
+        <div class="search-title">
+            <a class="back" href="/map/"><img src="{% static 'map/left-arrow.png' %}" /></a>
+            <h1 class="title">WealthWise</h1>
+        </div>
+        <form class="search-container" action="{% url 'map_search' %}" method="get">
+            <input type="text" name="q" placeholder={{ query }} class="search-input">
+        </form>
+    </div>
+    <div class="list-container">
+        <h2 class="heading">{{ query }}</h2>
+        <div class="business-list">
+            <div class="business">
+                <img class="business-img" src="{% static 'map/Ode_toronto.png' %}" />
+                <div class="business-info">
+                    <h2 class="business-title">Ode Toronto</h2>
+                    <div class="rating">
+                        <img src="{% static 'map/five-star.png' %}" />
+                        <div class="review-num">(199)</div>
+                    </div>
+                    <div class="business-detail">
+                        <div class="business-price">$$$$</div>
+                        <div class="business-type">Hotels</div>
+                    </div>
+                    <div class="business-address">1417 Dundas St W, Toronto, ON M6J 1Y4</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="business-list">
+            <div class="business">
+                <img class="business-img" src="{% static 'map/BAND_gallery.png' %}" />
+                <div class="business-info">
+                    <h2 class="business-title">BAND Gallery</h2>
+                    <div class="rating">
+                        <img src="{% static 'map/four-half-star.png' %}" />
+                        <div class="review-num">(35)</div>
+                    </div>
+                    <div class="business-detail">
+                        <div class="business-price">FREE</div>
+                        <div class="business-type">Exhibits</div>
+                    </div>
+                    <div class="business-address">401 Richmond St W, Toronto, ON M5V 3A8</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="business-list">
+            <div class="business">
+                <img class="business-img" src="{% static 'map/Blooming_flower_bar.png' %}" />
+                <div class="business-info">
+                    <h2 class="business-title">Blooming Flower Bar</h2>
+                    <div class="rating">
+                        <img src="{% static 'map/four-half-star.png' %}" />
+                        <div class="review-num">(122)</div>
+                    </div>
+                    <div class="business-detail">
+                        <div class="business-price">$$</div>
+                        <div class="business-type">Bars</div>
+                    </div>
+                    <div class="business-address">557B Parliament St, Toronto, ON M4X 1P7</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'image_upload/analyzer.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>AI Spending Analyzer</h1>
+    <h2>Receipt</h2>
+    <div class="receipt">
+        <img class="receipt-img" src="{{ image_upload.image.url }}" alt="Uploaded Image">
+        <div class="receipt-txt">
+            <h2 class="receipt-info">Item(s) Purchased</h2>
+            <div class="receipt-detail">iPad 32GB - $399.99</div>
+            <a class="retry-btn" href="/asset/">Retry</a>
+        </div>
+    </div>
+{% endblock %}

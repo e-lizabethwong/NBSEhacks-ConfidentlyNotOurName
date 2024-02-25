@@ -1,0 +1,62 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'image_upload/asset.css' %}">
+{% endblock %}
+
+{% block content %}
+    <h1>Finance Home</h1>
+    <section class="financial-empowerment">
+        <h2>Financial Empowerment</h2>
+        <p>It's that easy with WealthWise!</p>
+    </section>
+
+    <section class="accounts">
+        <div class="account">
+            <span>Chequing Account</span>
+            <span>$1,929</span>
+        </div>
+        <div class="account">
+            <span>Savings Account</span>
+            <span>$7,292</span>
+        </div>
+        <div class="total">
+            <span>Total</span>
+            <span>$9,221</span>
+        </div>
+    </section>
+
+    <section class="statistics">
+        <p>You are on track to meet your financial goals for February! Keep it up!</p>
+    </section>
+
+    <section class="ai-analyzer">
+        <div class="upload-area">
+            <form method="post" enctype="multipart/form-data" class="upload-form" id="upload-form">
+                {% csrf_token %}
+                <label for="id_image" class="upload-label">
+                    <img src="{% static 'image_upload/upload-img.png' %}" alt="Upload icon" class="upload-icon">
+                    <span id="file-name">Upload your receipt here to receive feedback</span>
+                    <input type="file" name="image" id="id_image" class="upload-input" onchange="fileSelected()">
+                </label>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+
+{% block js %}
+<script>
+    function fileSelected() {
+        var fileInput = document.getElementById('id_image');
+        var fileNameDisplay = document.getElementById('file-name');
+        
+        if (fileInput.files.length > 0) {
+            fileNameDisplay.textContent = fileInput.files[0].name; // Display the file name
+            document.getElementById('upload-form').submit(); // Auto-submit the form
+        } else {
+            fileNameDisplay.textContent = 'Upload your receipt here to receive feedback'; // Reset the text
+        }
+    }
+</script>
+{% endblock %}

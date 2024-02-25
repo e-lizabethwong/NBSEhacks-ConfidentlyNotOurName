@@ -25,7 +25,7 @@
     {% endif %}
   </a>
   <a href="/map/">
-    {% if request.path == "/map/" %}
+    {% if "/map/" in request.path  %}
         <img src="{% static 'navbar/discovery-active.png' %}" alt="Discovery"/>
     {% else %}
         <img src="{% static 'navbar/discovery-inactive.png' %}" alt="Discovery"/>

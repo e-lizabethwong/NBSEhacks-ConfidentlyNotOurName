@@ -1,0 +1,161 @@
+.content {
+    padding-top: 0;
+    margin-left: 0;
+}
+
+.topbar-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 151px;
+    background-color: #4278E0;
+}
+
+.search-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 27px;
+}
+
+.back {
+    position: absolute;
+    left: 18px;
+    top: 5px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    color: white;
+    font-family: 'MPLUSRounded1c-ExtraBold';
+    font-size: 24px;
+    width: 250px;
+}
+
+.search-container {
+    position: absolute;
+    left: 9px;
+    bottom: 10px;
+    width: 381px;
+}
+
+.search-input {
+    padding-left: 40px; /* Adjust as per the size of your search icon image */
+    background: url('/media/images/topbar-search.png') no-repeat;
+    background-position: 10px center;
+    background-color: white;
+    font-family: 'PTSans', sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    height: 44px;
+    width: 339px;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.heading {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.divider {
+    background-color: white;
+    width: 380px;
+    height: 3px;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.business-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.business {
+    display: flex;
+    width: 400px;
+    height: 150px;
+}
+
+.business-img {
+    width: 122px;
+    height: 122px;
+    margin-left: 18px;
+}
+
+.business-info {
+    width: 240px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.business-info div{
+    margin-bottom: 2px;
+}
+
+.business-title {
+    font-family: 'PTSans';
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating img {
+    height: 20px;
+}
+
+.review-num {
+    font-family: 'PTSans';
+    font-size: 16px;
+    color: gray;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+.business-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-price {
+    font-family: 'PTSans';
+    font-size: 16px;
+    color: gray;
+}
+
+.business-type {
+    font-family: 'PTSans';
+    font-size: 16px;
+    color: blue;
+}
+
+.business-address {
+    font-family: 'PTSans';
+    font-size: 16px;
+    color: gray;
+    width: 240px;
+}

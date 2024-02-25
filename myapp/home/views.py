@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse, HttpResponseRedirect
 from django.template import loader
 from image_upload.models import ImageUpload
 from django.conf import settings
 from cohereChat import cohereChat
+from image_upload.forms import ImageUploadForm
 
 def home(request):
     myimages = ImageUpload.objects.all().values()
@@ -41,3 +42,21 @@ def end_chat_session(request):
         del request.session['chat_history']
     # Redirect to the personal page
     return redirect('personal')  # Ensure you have a URL named 'personal'
+
+def map_search(request):
+    query = request.GET.get('q', '')
+    # Here you'd typically perform the search on your models based on the query
+    # For example, if searching in a model called 'Product':
+    # results = Product.objects.filter(name__icontains=query)
+    results = []  # Replace with actual search logic
+    return render(request, 'map_search.html', {'query': query})
+
+def asset(request):
+    if request.method == 'POST':
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+        form = ImageUploadForm()
+    return render(request, 'asset.html', {'form': form})

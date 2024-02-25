@@ -6,5 +6,21 @@
 {% endblock %}
 
 {% block content %}
-    
+    <div class="topbar-container">
+        <img src="{% static 'map/topbar-image.png' %}" />
+        <div class="topbar-component">
+            <h1 class="title">WealthWise</h1>
+            <p class="subheading">Support local black owned businesses</p>
+            <div class="search-container">
+                <form action="{% url 'map_search' %}" method="get">
+                    <input type="text" name="q" placeholder="Search" class="search-input">
+                    <button type="submit" class="search-button">
+                        <img src="{% static 'map/topbar-submit.png' %}" alt="Search">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <img class="icon-container" src="{% static 'map/icon-container.png' %}" />
+    <img class="map-image" src="{% static 'map/map-image.png' %}" />
 {% endblock %}
