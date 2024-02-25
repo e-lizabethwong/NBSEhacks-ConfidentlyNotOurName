@@ -1,0 +1,79 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/personal.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Explore mentors</h1>
+<h2 class="sub-heading">It’s that easy with WealthSimple!</h2>
+<div class="searchbar-container">
+    <input type="text" placeholder="Search anything...">
+    <img src="{% static 'personal/search-filter.png' %}" alt="Filter"/>
+</div>
+
+<h2 class="meeting">Upcoming meetings</h2>
+<div class="meeting-list">
+    <div class="meeting-container">
+        <img class="person-img" src="{% static 'personal/Malik.png' %}" />
+        <div class="text-container">
+            <p class="decription">Health chat with Malik</p>
+            <p class="date">Today at 9:00 PM - 30 min</p>
+        </div>
+        <a href="/chatbot/" class="right-arrow">
+            <img src="{% static 'personal/right-arrow.png' %}" />
+        </a>
+    </div>
+    <div class="meeting-container">
+        <img class="person-img" src="{% static 'personal/Andre.png' %}" />
+        <div class="text-container">
+            <p class="decription">Mentoring with Andre</p>
+            <p class="date">Today at 10:30 PM - 30 min</p>
+        </div>
+        <a href="/chatbot/" class="right-arrow">
+            <img src="{% static 'personal/right-arrow.png' %}" />
+        </a>
+    </div>
+    <div class="meeting-container">
+        <img class="person-img" src="{% static 'personal/Rashad.png' %}" />
+        <div class="text-container">
+            <p class="decription">Learn Programming with Rashad</p>
+            <p class="date">Tomorrow at 7:00 PM - 45 min</p>
+        </div>
+        <a href="/chatbot/" class="right-arrow">
+            <img src="{% static 'personal/right-arrow.png' %}" />
+        </a>
+    </div>
+</div>
+
+<h2 class="recommended">Recommended mentors</h2>
+<div class="recommended-list">
+    <div class="recommended-wrapper">
+        <div class="recommended-container">
+            <img class="recommended-img" src="{% static 'personal/Marcus.png' %}" />
+            <p class="recommended-name">Marcus</p>
+            <div class="recommended-row">
+                <p class="category">Health</p>
+                <div class="rating">
+                    <p>4.95</p>
+                    <img class="star-img" src="{% static 'personal/star.png' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recommended-wrapper">
+        <div class="recommended-container">
+            <img class="recommended-img" src="{% static 'personal/Kwame.png' %}" />
+            <p class="recommended-name">Kwame</p>
+            <div class="recommended-row">
+                <p class="category">Business</p>
+                <div class="rating">
+                    <p>4.95</p>
+                    <img class="star-img" src="{% static 'personal/star.png' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

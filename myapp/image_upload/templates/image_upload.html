@@ -1,20 +1,16 @@
+{% extends 'master.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Upload Image</title>
-    <link rel="stylesheet" href="{% static 'image_upload/style.css' %}">
-</head>
-<body>
-<div>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Upload</button>
-    </form>
+{% block css %}
+<link rel="stylesheet" href="{% static 'image_upload/style.css' %}">
+{% endblock %}
 
-    <button><a href="{% url 'home' %}">Go Home</a></button>
-</div>
-</body>
-</html>
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+</form>
+
+<button><a href="{% url 'home' %}">Go Home</a></button>
+{% endblock content %}
