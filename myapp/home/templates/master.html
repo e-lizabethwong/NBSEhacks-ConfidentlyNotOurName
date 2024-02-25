@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Money</title>
+  <title>WealthWise</title>
   <link rel="stylesheet" href="{% static 'home/master.css' %}">
   {% block css %}
   {% endblock %}
@@ -24,8 +24,8 @@
         <img src="{% static 'navbar/home-inactive.png' %}" alt="Home"/>
     {% endif %}
   </a>
-  <a href="/nav/">
-    {% if request.path == "/nav/" %}
+  <a href="/map/">
+    {% if request.path == "/map/" %}
         <img src="{% static 'navbar/discovery-active.png' %}" alt="Discovery"/>
     {% else %}
         <img src="{% static 'navbar/discovery-inactive.png' %}" alt="Discovery"/>

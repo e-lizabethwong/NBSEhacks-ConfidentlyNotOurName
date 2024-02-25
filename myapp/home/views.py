@@ -14,3 +14,6 @@ def home(request):
 
 def personal(request):
     return render(request, 'personal.html')
+
+def map(request):
+    return render(request, 'map.html')
