@@ -1,42 +1,142 @@
-.upload-form {
+financial-empowerment {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.accounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 26px;
+    width: 26px;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 355px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.account span {
+    display: block;
+    color: black;
+}
+
+.account .cost {
+    color: #96A7AF;
+    font-size: 14px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70px;
+    width: 355px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+
+.total .cost {
+    color: #96A7AF;
+    font-size: 14px;
+}
+
+.total span {
+    display: block;
+    color: black;
+}
+
+.price {
+    color: gray;
+}
+
+.statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    height: 70px;
+    width: 355px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.stat-description {
+    font-family: sans-serif;
+    font-size: 15px;
+    color: gray;
+}
+
+.ai-analyzer {
+    padding: 20px;
+    width: 355px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    margin-top: 20px;
+    clear: both;
+    box-sizing: border-box;
+}
+
+.ai-analyzer .upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    border: 2px dashed #000000;
+}
+
+.ai-analyzer .upload-label {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.upload-label {
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 
-.upload-icon {
-    /* Adjust the size of your icon as needed */
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+.ai-analyzer .upload-icon {
+    width: 50px;
+    height: 50px;
 }
 
-/* Hide the actual file input but keep it functional */
-.upload-form input[type="file"] {
-    opacity: 0;
-    width: 0.1px;
-    height: 0.1px;
-    position: absolute;
+.ai-analyzer .upload-input {
+    display: none;
+
+    @media screen and (max-width: 400px) {
+        .account {
+            flex: 0 0 100%;
+        }
+    }
 }
 
-.upload-btn {
-    /* Style your button as needed */
-    background-color: #4CAF50; /* Example background color */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#file-name {
     margin-top: 10px;
-}
-
-/* Optional: Style the file input label on hover */
-.upload-label:hover {
-    background-color: #f2f2f2; /* Example hover color */
+    width: 190px;
+    text-align: center;
 }

@@ -6,20 +6,23 @@
 {% endblock %}
 
 {% block content %}
-    <h1>AI Spending Analyzer</h1>
+    <div class="header">
+        <a class="back" href="/asset/"><img src="{% static 'image_upload/left-arrow.png' %}" alt="back-icon"></a>
+        <h1>AI Spending Analyzer</h1>
+    </div>
     <h2>Receipt</h2>
     <div class="receipt">
         <img class="receipt-img" src="{{ image_upload.image.url }}" alt="Uploaded Image">
         <div class="receipt-txt">
             <h2 class="receipt-info">Item(s) Purchased</h2>
-            <div class="receipt-detail">iPad 32GB - $399.99</div>
+            <div class="receipt-detail">Printer - $299.99</div>
             <a class="retry-btn" href="/asset/">Retry</a>
         </div>
     </div>
     <h2>Output</h2>
     <div class="output">
-        <div class="output-txt">
-            <div class="output-detail">Hey there! I saw you got a new iPad, and it caught my eye because you got one just two months ago. Knowing about both purchases, it seems like you might have two iPads now. Having two so close together might mean you've spent money on something you might not really need right now. It's a good idea to think about whether these purchases fit into your overall plans and priorities. Making sure your spending lines up with your goals is a smart move for your wallet!</div>
-        </div>
+        <img src="{% static 'image_upload/angry.png' %}" alt="output-icon" class="output-icon">
+        <h2 class="output-status">Frivolous Purchase</h2>
+        <div class="output-detail">Hey there! I saw you got a new printer, and it caught my eye because you got one just two months ago. Knowing about both purchases, it seems like you might have two printer now. Having two so close together might mean you've spent money on something you might not really need right now. It's a good idea to think about whether these purchases fit into your overall plans and priorities. Making sure your spending lines up with your goals is a smart move for your wallet! Have you considered returning the printer?</div>
     </div>
 {% endblock %}

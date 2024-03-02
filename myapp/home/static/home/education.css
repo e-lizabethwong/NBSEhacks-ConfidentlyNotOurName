@@ -1,0 +1,102 @@
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+.sub-heading {
+    color: gray;
+}
+
+.searchbar-container {
+    display: flex; /* Enables Flexbox layout for children of this div */
+    flex-direction: row;
+    align-items: center; /* Centers children horizontally */
+    height: 43px;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.searchbar-container input {
+    height: 40px;
+    width: 293px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 12px;
+}
+
+.searchbar-container img {
+    height: 40px;
+    width: 38.65px;
+}
+
+.scholarships-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+}
+
+.scholarship {
+    display: flex;
+    height: 85px;
+    width: 355px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.scholarship-txt {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+}
+
+.scholarship-name {
+    font-size: 10px;
+    width: 300px;
+}
+
+.scholarship-deadline {
+    color: gray;
+    font-size: 14px;
+}
+
+.scholarships-trends {
+    margin-top: -50px;
+}
+
+.scholarship-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 355px;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.stat {
+    height: 120px;
+}
+
+.stat-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-x {
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.stat-y {
+    height: 100px;
+}

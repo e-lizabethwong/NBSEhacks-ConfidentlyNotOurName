@@ -1,0 +1,51 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'home/education.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Education Pathway</h1>
+<h2 class="sub-heading">It’s that easy with WealthSimple!</h2>
+
+<div class="searchbar-container">
+    <input type="text" placeholder="Search for scholarships...">
+    <img src="{% static 'personal/search-filter.png' %}" alt="Filter"/>
+</div>
+
+<section class="scholarships-list">
+    <h2>Upcoming Scholarships Deadlines</h2>
+    <div class="scholarship">
+        <div class="scholarship-txt">
+            <span class="scholarship-name">Bennett Family Award for Black and Indigenous Students - York University</span>
+            <span class="scholarship-deadline">April 1, 2024 - $7,500 per year</span>
+        </div>
+    </div>
+    <div class="scholarship">
+        <div class="scholarship-txt">
+            <span class="scholarship-name">A.L. Cochrane Scholarship - University of Toronto</span>
+            <span class="scholarship-deadline">February 28, 2024 - $5,000</span>
+        </div>
+    </div>
+    <div class="scholarship">
+        <div class="scholarship-txt">
+            <span class="scholarship-name">Waterloo Black Brilliance Sankofa Award - University of Waterloo</span>
+            <span class="scholarship-deadline">April 15, 2024 - $2,500 per academic term</span>
+        </div>
+    </div>
+</section>
+
+<section class="scholarship-trends">
+    <h2>Scholarship Trends</h2>
+    <!-- Placeholder for the chart -->
+    <div class="scholarship-stat">
+        <div class="stat-container">
+            <img class="stat-y" src="{% static 'education/stat-y.png' %}" alt="stat"/>
+            <img class="stat" src="{% static 'education/scholarship-stat.png' %}" alt="stat"/>
+        </div>
+        <div class="stat-x">Days until Scholarship Deadline</div>
+    </div>
+</section>
+
+{% endblock %}

@@ -60,3 +60,9 @@ def asset(request):
     else:
         form = ImageUploadForm()
     return render(request, 'asset.html', {'form': form})
+
+def education(request):
+    return render(request, 'education.html')
+
+def health(request):
+    return render(request, 'health.html')

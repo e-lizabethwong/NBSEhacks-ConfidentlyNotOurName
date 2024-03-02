@@ -50,6 +50,8 @@
   <a href="/asset/">
     {% if request.path == "/asset/" %}
         <img src="{% static 'navbar/dollar-active.png' %}" alt="Dollar"/>
+    {% elif "/display-image/" in request.path %}
+      <img src="{% static 'navbar/dollar-active.png' %}" alt="Dollar"/>
     {% else %}
         <img src="{% static 'navbar/dollar-inactive.png' %}" alt="Dollar"/>
     {% endif %}
